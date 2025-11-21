@@ -24,9 +24,6 @@
   --secondary: #efefef;
 }
 
-/* html {
-  font-size: calc(100vw / 1920 * 10);
-} */
 
 body {
   font-family: 'Primary';
@@ -34,27 +31,6 @@ body {
   color: var(--secondary);
 }
 
-/* TEXT ELEMENTS */
-
-/* h1 {
-  font-size: 6rem;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 3.2rem;
-  text-transform: uppercase;
-}
-
-span {
-  font-family: 'Secondary';
-  font-size: 1.4rem;
-}
-
-p {
-  font-family: 'Secondary';
-  font-size: 2rem;
-} */
 
 img {
   width: 100%;
@@ -144,13 +120,6 @@ main{
   z-index: 1;
 }
 
-/* .intro_card_container {
-  height: 100%;
-  padding: 2.4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
 
 .cardToptext {
   display: flex;
@@ -195,10 +164,6 @@ span{
 /* TITLE */
 
 .colTitle {
-  /* position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);*/
   position: relative;
   text-transform: uppercase;
   text-align: center;
@@ -214,16 +179,6 @@ span{
   gap: 11vw;
 }
 
-/* .intro_title_container {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-} */
-
-/* .intro_title_row {
-  overflow: hidden;
-} */
-
 .colPortrait {
   position: absolute;
   top: 60%;
@@ -236,12 +191,6 @@ span{
   background-position: 45% 20%;  /* focus on face */
   background-repeat: no-repeat;
 }
-
-
-
-
-
-
 
 
 /* ---------------------- RESPONSIVE ---------------------- */

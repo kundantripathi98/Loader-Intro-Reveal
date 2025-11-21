@@ -1,0 +1,291 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Primary';
+  src: url('./fonts/PPFragment-SerifRegular.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Secondary';
+  src: url('./fonts/Questrial-Regular.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary: #111111;
+  --secondary: #efefef;
+}
+
+/* html {
+  font-size: calc(100vw / 1920 * 10);
+} */
+
+body {
+  font-family: 'Primary';
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+/* TEXT ELEMENTS */
+
+/* h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+}
+
+span {
+  font-family: 'Secondary';
+  font-size: 1.4rem;
+}
+
+p {
+  font-family: 'Secondary';
+  font-size: 2rem;
+} */
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------------------- LOADER ---------------------- */
+
+.loader {
+  /* display: none; */
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+   display: flex;
+  align-items: flex-end;
+  padding: 3.2rem;
+  background-color: #161616;
+  z-index: 100000000000000;
+}
+
+
+.loaderPercentage {
+  overflow: hidden;
+}
+
+.loaderPercentage h1 {
+  font-size: 16vw;
+}
+
+/* ---------------------- INTRO SECTION ---------------------- */
+
+main{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.column {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw 4vw;
+}
+
+
+.column:nth-child(1){
+   width: 60vw; 
+}
+
+.column:nth-child(2){ 
+  width: 40vw; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.columnBackground {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.columnBackground::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.44;
+}
+
+.card {
+  position: absolute;
+  width: 22vw;
+  height: 27vw;
+  padding: 1.2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--primary);
+  z-index: 1;
+}
+
+/* .intro_card_container {
+  height: 100%;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+.cardToptext {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardHeading{
+  display: flex;
+  flex-direction: column;
+  gap: 1.1vw;
+}
+
+.cardHeading h2{
+  font-size: 2.15vw;
+}
+
+.colParagraph {
+  text-align: center;
+  z-index: 2;
+}
+
+p{
+  font-size: 1vw;
+  line-height: 110%;
+  font-family: "Secondary";
+}
+
+span{
+  font-size: 0.8vw;
+  font-family: "Secondary";
+}
+
+.colParagraph span {
+  display: block;
+  margin-bottom: 0.9vw;
+}
+
+.column:nth-child(1) .colParagraph {
+  align-self: flex-end;
+}
+
+/* TITLE */
+
+.colTitle {
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);*/
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.4vw;
+}
+
+.colTitle .text{
+  display: flex;
+  gap: 11vw;
+}
+
+/* .intro_title_container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+} */
+
+/* .intro_title_row {
+  overflow: hidden;
+} */
+
+.colPortrait {
+  position: absolute;
+  top: 60%;
+  left: 34%;
+  width: 8vw;
+  margin-bottom: 3vw;
+  height: 10vw;
+  background-image: url('./assets/portrait.jpg');
+  background-size: 190%;        /* zoom */
+  background-position: 45% 20%;  /* focus on face */
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+/* ---------------------- RESPONSIVE ---------------------- */
+
+@media screen and (max-width: 720px) {
+  .column:nth-child(1) {
+     width: 100%; padding: 8vw;
+  }
+  .column:nth-child(2) { display: none; }
+
+  .loaderPercentage h1 {
+  font-size: 20vw;
+}
+
+  .card {
+    width: 75vw;
+    height: 85vw;
+    padding: 3.2vw;
+  }
+
+  p{
+  font-size: 3vw;
+}
+
+span{
+  font-size: 2.5vw;
+}
+
+
+.cardHeading{
+  gap: 3.1vw;
+}
+
+.cardHeading span{
+  font-size: 4vw;
+}
+
+.cardHeading h2{
+  font-size: 7.45vw;
+}
+
+
+.colParagraph span {
+  margin-bottom: 2.5vw;
+}
+
+}

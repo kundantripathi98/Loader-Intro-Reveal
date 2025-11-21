@@ -50,7 +50,7 @@ img {
   align-items: flex-end;
   padding: 3.2rem;
   background-color: #161616;
-  z-index: 100000000000000;
+  z-index: 10;
 }
 
 

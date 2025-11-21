@@ -73,6 +73,17 @@ main{
   z-index: 20;
 }
 
+p{
+  font-size: 1vw;
+  line-height: 110%;
+  font-family: "Secondary";
+}
+
+span{
+  font-size: 0.8vw;
+  font-family: "Secondary";
+}
+
 .column {
   position: relative;
   height: 100%;
@@ -141,16 +152,7 @@ main{
   z-index: 2;
 }
 
-p{
-  font-size: 1vw;
-  line-height: 110%;
-  font-family: "Secondary";
-}
 
-span{
-  font-size: 0.8vw;
-  font-family: "Secondary";
-}
 
 .colParagraph span {
   display: block;
